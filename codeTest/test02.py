@@ -59,7 +59,7 @@ child_window(title="Untitled• - Typora", control_type="Pane")
 # win.wait("visible")
 
 
-app = Application(backend="uia").connect(process=20184)
-win = app.top_window()
-win.wait('exists')
-print(win.print_control_identifiers())
+# app = Application(backend="uia").connect(process=20184)
+# win = app.top_window()
+# win.wait('exists')
+# print(win.print_control_identifiers())
