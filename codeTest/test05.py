@@ -68,13 +68,29 @@ from pywinauto.application import Application
 # disabled_btn.wait_not("enabled") # 代码执行通过
 # #disabled_btn.wait("enabled") # 代码执行不通过 -- 会超时
 
+# # 打开计算器
+# app = Application(backend="uia").connect(process=14752)
+# win = app.window(title="计算器")
+# win.wait("exists")
+#
+# proc = win.child_window(title="打开导航", auto_id="TogglePaneButton", control_type="Button")
+# proc.wait("ready") # 等待成功
+#
+# proc_chid = win.child_window(auto_id="PaneTitleTextBlock", control_type="Text")
+# proc_chid.wait("ready") # 等待失败
+
 # 打开计算器
 app = Application(backend="uia").connect(process=14752)
 win = app.window(title="计算器")
-win.wait("exists")
 
-proc = win.child_window(title="打开导航", auto_id="TogglePaneButton", control_type="Button")
-proc.wait("ready") # 等待成功
+# 把焦点放到计算器上
+win.set_focus()
 
-proc_chid = win.child_window(auto_id="PaneTitleTextBlock", control_type="Text")
-proc_chid.wait("ready") # 等待失败
+# 先对计算器进行操作: 输入1
+num1_btn = win.child_window(title="一", auto_id="num1Button", control_type="Button")
+
+# 点击按钮
+num1_btn.click_input()
+
+# 等待成功
+win.wait("active")
