@@ -36,18 +36,45 @@ from pywinauto.application import Application
 # # 检查窗口是否准备就绪
 # win.wait('ready')
 
+# # 打开计算器
+# # app = Application(backend="uia").start("calc.exe")
+# app = Application(backend="uia").connect(process=14752)
+# win = app.window(title="计算器")
+# win.wait("visible")
+#
+# # 启用的按钮
+# enable_btn = win.child_window(title="记忆加法", auto_id="MemPlus", control_type="Button")
+#
+# # 未启用的按钮
+# disabled_btn = win.child_window(title="清除所有记忆", auto_id="ClearMemoryButton", control_type="Button")
+#
+# enable_btn.wait("enabled")       # 代码执行通过
+# disabled_btn.wait_not("enabled") # 代码执行通过
+# #disabled_btn.wait("enabled") # 代码执行不通过 -- 会超时
+
 # 打开计算器
 # app = Application(backend="uia").start("calc.exe")
+# app = Application(backend="uia").connect(process=14752)
+# win = app.window(title="计算器")
+# win.wait("visible")
+#
+# # 启用的按钮
+# enable_btn = win.child_window(title="记忆加法", auto_id="MemPlus", control_type="Button")
+#
+# # 未启用的按钮
+# disabled_btn = win.child_window(title="清除所有记忆", auto_id="ClearMemoryButton", control_type="Button")
+#
+# enable_btn.wait("enabled")       # 代码执行通过
+# disabled_btn.wait_not("enabled") # 代码执行通过
+# #disabled_btn.wait("enabled") # 代码执行不通过 -- 会超时
+
+# 打开计算器
 app = Application(backend="uia").connect(process=14752)
 win = app.window(title="计算器")
-win.wait("visible")
+win.wait("exists")
 
-# 启用的按钮
-enable_btn = win.child_window(title="记忆加法", auto_id="MemPlus", control_type="Button")
+proc = win.child_window(title="打开导航", auto_id="TogglePaneButton", control_type="Button")
+proc.wait("ready") # 等待成功
 
-# 未启用的按钮
-disabled_btn = win.child_window(title="清除所有记忆", auto_id="ClearMemoryButton", control_type="Button")
-
-enable_btn.wait("enabled")       # 代码执行通过
-disabled_btn.wait_not("enabled") # 代码执行通过
-#disabled_btn.wait("enabled") # 代码执行不通过 -- 会超时
+proc_chid = win.child_window(auto_id="PaneTitleTextBlock", control_type="Text")
+proc_chid.wait("ready") # 等待失败
