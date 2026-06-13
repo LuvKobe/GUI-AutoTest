@@ -18,20 +18,36 @@ from pywinauto.application import Application
 #
 # win.close()
 
-# 创建Application对象，连接到正在运行的Typora进程
-app = Application(backend='uia').connect(process=5092)
+# # 创建Application对象，连接到正在运行的Typora进程
+# app = Application(backend='uia').connect(process=5092)
+#
+# # 获取与Typora相关的窗口对象，使用正则表达式匹配窗口标题
+# win = app.window(title_re='.*po.*')
+#
+# # 检查窗口是有效的句柄
+# win.wait('exists')
+#
+# # 检查窗口是否可见
+# win.wait('visible')
+#
+# # 检查窗口是否未被禁用
+# win.wait('enabled')
+#
+# # 检查窗口是否准备就绪
+# win.wait('ready')
 
-# 获取与Typora相关的窗口对象，使用正则表达式匹配窗口标题
-win = app.window(title_re='.*po.*')
+# 打开计算器
+# app = Application(backend="uia").start("calc.exe")
+app = Application(backend="uia").connect(process=14752)
+win = app.window(title="计算器")
+win.wait("visible")
 
-# 检查窗口是有效的句柄
-win.wait('exists')
+# 启用的按钮
+enable_btn = win.child_window(title="记忆加法", auto_id="MemPlus", control_type="Button")
 
-# 检查窗口是否可见
-win.wait('visible')
+# 未启用的按钮
+disabled_btn = win.child_window(title="清除所有记忆", auto_id="ClearMemoryButton", control_type="Button")
 
-# 检查窗口是否未被禁用
-win.wait('enabled')
-
-# 检查窗口是否准备就绪
-win.wait('ready')
+enable_btn.wait("enabled")       # 代码执行通过
+disabled_btn.wait_not("enabled") # 代码执行通过
+#disabled_btn.wait("enabled") # 代码执行不通过 -- 会超时
