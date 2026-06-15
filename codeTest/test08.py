@@ -1,3 +1,5 @@
+import time
+
 from pywinauto import mouse
 from pywinauto.application import Application
 
@@ -29,5 +31,16 @@ from pywinauto.application import Application
 
 #mouse.scroll(coords=(900, 600), wheel_dist=-900)
 
+# 连接计算器窗口
+app = Application(backend="uia").connect(process=14752)
+win = app.window(title="计算器")
+win.wait("visible") # 这里是为了让程序卡住等一下，直到计算器窗口完全显示在屏幕上，防止后面的操作因为窗口没加载完而报错。
 
- 
+# 找到数字键盘区域
+num_pad = win.child_window(title="数字键盘", auto_id="NumberPad", control_type="Group")
+
+# 自动循环点击每一个数字
+for num in num_pad.children(): # 遍历数字键盘里的每一个子按钮（比如数字 1、2、3...）。
+    point = num.rectangle().mid_point() # 获取当前按钮在屏幕上的中心点坐标（X 轴和 Y 轴）。
+    mouse.click(coords=(point.x, point.y)) # 控制你的真实鼠标指针，移动到这个中心点并执行点击。
+    time.sleep(2)
