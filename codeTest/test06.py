@@ -35,10 +35,20 @@ from pywinauto.application import Application
 # time.sleep(5)
 
 
+# # 打开Typora
+# app = Application(backend='uia').connect(process=8016)
+# win = app.window(title_re='.*po.*')
+# win.wait("visible") # 保证窗口是可见的
+# print(win.print_control_identifiers())
+# # 对窗口进行右键操作
+# win.right_click_input()
+
+
 # 打开Typora
 app = Application(backend='uia').connect(process=8016)
 win = app.window(title_re='.*po.*')
 win.wait("visible") # 保证窗口是可见的
-print(win.print_control_identifiers())
-# 对窗口进行右键操作
-win.right_click_input()
+
+# 双击标题栏
+title_bar = win['TitleBar']
+title_bar.double_click_input()
