@@ -13,7 +13,7 @@ for i in range(0,3):
     #双击视频刷赞
     point = win.rectangle().mid_point()
 
-    time.sleep(2)
+    time.sleep(2) # 休眠
     #调用高级api双击
     win.double_click_input()
     # #鼠标操作
