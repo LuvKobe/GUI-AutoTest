@@ -1,0 +1,128 @@
+#根据元素进行实时调整
+logo:
+  auto_id: QQMusic.background.head.headLeft.logo
+  control_type: Text
+search:
+  auto_id: QQMusic.background.head.headRight.searchBox.lineEdit
+  control_type: Edit
+换肤:
+  auto_id: QQMusic.background.head.headRight.settingBox.skin
+  control_type: Button
+最小化:
+  auto_id: QQMusic.background.head.headRight.settingBox.min
+  control_type: Button
+导入音乐:
+  auto_id: QQMusic.background.body.bodyRight.controlBox.play2.addLocal
+  control_type: Button
+本地下载:
+  auto_id: QQMusic.background.body.bodyLeft.leftBox.myMusic.local.btStyle
+  control_type: Group
+  播放全部:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.localPage.musicPlayBox.playAll.playAllBtn
+    control_type: Button
+  本地音乐文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.localPage.PageTittle
+    control_type: Text
+  歌曲名称文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.localPage.listLabelBox.musicNameLabel
+    control_type: Text
+  歌手名称文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.localPage.listLabelBox.musicSingerLabel
+    control_type: Text
+  专辑名称文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.localPage.listLabelBox.musicAlbumLabel
+    control_type: Text
+播放控制:
+  播放总进度:
+    auto_id: QQMusic.background.body.bodyRight.progressBar.inLine
+    control_type: Custom
+  当前播放进度:
+    auto_id: QQMusic.background.body.bodyRight.progressBar.outLine
+    control_type: Custom
+  歌曲名:
+    auto_id: QQMusic.background.body.bodyRight.controlBox.play1.musicName
+    control_type: Text
+  歌手名:
+    auto_id: QQMusic.background.body.bodyRight.controlBox.play1.musicSinger
+    control_type: Text
+  模式切换:
+    auto_id: QQMusic.background.body.bodyRight.controlBox.play2.playMode
+    control_type: Button
+  播放:
+    auto_id: QQMusic.background.body.bodyRight.controlBox.play2.play
+    control_type: Button
+歌曲列表:
+  auto_id: QQMusic.background.body.bodyRight.stackedWidget.localPage.pageMusicList
+  control_type: List
+推荐:
+  auto_id: QQMusic.background.body.bodyLeft.leftBox.onlineMusic.rec.btStyle
+  control_type: Group
+  推荐文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.recText
+    control_type: Text
+  今日为你推荐文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.recMusicText
+    control_type: Text
+  你的音乐补给文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.supplyMusicText
+    control_type: Text
+  今日为你推荐左滚动:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.recMusicBox.leftPage
+    control_type: Group
+  今日为你推荐右滚动:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.recMusicBox.rightPage
+    control_type: Group
+  今日为你推荐第一项文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.recMusicBox.musicContent.recListUp.RecBoxItem.recBoxItemText
+    control_type: Text
+  音乐补给左滚动:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.supplyMuscBox.leftPage
+    control_type: Group
+  音乐补给右滚动:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.supplyMuscBox.rightPage
+    control_type: Group
+  音乐补给第一排第一项文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.supplyMuscBox.musicContent.recListUp.RecBoxItem.recBoxItemText
+    control_type: Text
+  音乐补给第二排第一项文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.recPage.scrollArea.qt_scrollarea_viewport.scrollAreaWidgetContents_2.supplyMuscBox.musicContent.recListDown.RecBoxItem.recBoxItemText
+    control_type: Text
+  推荐整个模块:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget
+    control_type: Custom
+我喜欢:
+  auto_id: QQMusic.background.body.bodyLeft.leftBox.myMusic.like.btStyle
+  control_type: Group
+  我喜欢文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.likePage.PageTittle
+    control_type: Text
+  歌曲名称文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.likePage.listLabelBox.musicNameLabel
+    control_type: Text
+  歌手名称文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.likePage.listLabelBox.musicSingerLabel
+    control_type: Text
+  专辑名称文本:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.likePage.listLabelBox.musicAlbumLabel
+    control_type: Text
+  播放全部:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.likePage.musicPlayBox.playAll.playAllBtn
+    control_type: Button
+  歌曲列表:
+    auto_id: QQMusic.background.body.bodyRight.stackedWidget.likePage.pageMusicList
+    control_type: List
+歌词入口:
+  auto_id: QQMusic.background.body.bodyRight.controlBox.play3.lrcWord
+  control_type: Button
+  歌手标题文本:
+    auto_id: QQMusic.LrcPage.bgStyle.lrcTop.titleBox.musicSinger
+    control_type: Text
+  歌曲名标题文本:
+    auto_id: QQMusic.LrcPage.bgStyle.lrcTop.titleBox.musicName
+    control_type: Text
+  收起歌词:
+    auto_id: QQMusic.LrcPage.bgStyle.lrcTop.hideBtn
+    control_type: Button
+  歌词列表:
+     auto_id: QQMusic.LrcPage.bgStyle.lrcContent
+     control_type: Group
