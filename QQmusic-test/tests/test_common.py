@@ -8,7 +8,7 @@ from utils.logUtils import Logger
 from utils.yamlUtils import read_yaml
 
 @pytest.mark.order(1)
-class estCommon:
+class TestCommon:
     logger = Logger.getlog()
     '''
     测试logo
