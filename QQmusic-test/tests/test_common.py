@@ -1,17 +1,19 @@
 import math
 import time
 
+import pytest
 from pywinauto import mouse
 
 from utils.logUtils import Logger
 from utils.yamlUtils import read_yaml
 
-class TestCommon:
+@pytest.mark.order(1)
+class estCommon:
     logger = Logger.getlog()
     '''
     测试logo
     '''
-    def est_logo(self, QQMusic_app):
+    def test_logo(self, QQMusic_app):
         logo_ele = read_yaml("logo")
         logo = QQMusic_app.win.child_window(auto_id=logo_ele['auto_id'], control_type=logo_ele["control_type"])
         #logo = QQMusic_app.win.child_window(auto_id="QQMusic.background.head.headLeft.logo", control_type="Text")
@@ -20,7 +22,7 @@ class TestCommon:
     '''
     测试 - 搜索功能
     '''
-    def est_search(self, QQMusic_app):
+    def test_search(self, QQMusic_app):
         edit_ele = read_yaml("search")
         edit = QQMusic_app.win.child_window(auto_id=edit_ele['auto_id'], control_type=edit_ele["control_type"])
         #edit = QQMusic_app.win.child_window(auto_id="QQMusic.background.head.headRight.searchBox.lineEdit", control_type="Edit")
@@ -32,7 +34,7 @@ class TestCommon:
     '''
     测试——换皮肤
     '''
-    def est_skin(self,QQMusic_app):
+    def test_skin(self,QQMusic_app):
         skin_ele = read_yaml("换肤")
         skin = QQMusic_app.win.child_window(auto_id=skin_ele['auto_id'],
                                             control_type=skin_ele['control_type'])
@@ -55,7 +57,7 @@ class TestCommon:
     '''
     测试——最小化
     '''
-    def est_window_min(self,QQMusic_app):
+    def test_window_min(self,QQMusic_app):
         window_min_ele = read_yaml("最小化")
         window_min_btn = QQMusic_app.win.child_window(auto_id=window_min_ele['auto_id'],
                                                      control_type=window_min_ele['control_type'])
@@ -70,7 +72,7 @@ class TestCommon:
     '''
     测试——导入音乐
     '''
-    def est_importMusic(self,QQMusic_app):
+    def test_importMusic(self,QQMusic_app):
         import_ele = read_yaml("导入音乐")
         import_btn = QQMusic_app.win.child_window(auto_id=import_ele['auto_id'],
                                      control_type=import_ele['control_type'])
@@ -93,7 +95,7 @@ class TestCommon:
     默认模式就是随机播放
     默认是暂停
     '''
-    def est_play_random(self,QQMusic_app):
+    def test_play_random(self,QQMusic_app):
         #点击播放全部
         local_ele = read_yaml("本地下载")
         play_all_ele = local_ele["播放全部"]
@@ -138,7 +140,7 @@ class TestCommon:
     默认模式就是随机播放--切换模式
     上一个用例执行完是播放
     '''
-    def est_play_single(self,QQMusic_app):
+    def test_play_single(self,QQMusic_app):
         # 点击播放全部
         local_ele = read_yaml("本地下载")
         play_all_ele = local_ele["播放全部"]
