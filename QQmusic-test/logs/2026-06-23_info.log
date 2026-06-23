@@ -1,0 +1,8 @@
+2026-06-23 20:37:27,067 INFO [utils.logUtils] [conftest.py (launch:21)] - 应用程序启动成功！
+2026-06-23 20:37:36,894 INFO [utils.logUtils] [test_common.py (test_play_random:131)] - 第1次判断随机播放下一曲正确
+2026-06-23 20:37:40,309 INFO [utils.logUtils] [test_common.py (test_play_single:189)] - 第1次校验单曲循环模式播放下一首歌曲正确
+2026-06-23 20:37:43,247 INFO [utils.logUtils] [test_common.py (test_play_single:189)] - 第2次校验单曲循环模式播放下一首歌曲正确
+2026-06-23 20:37:46,218 INFO [utils.logUtils] [test_common.py (test_play_single:189)] - 第3次校验单曲循环模式播放下一首歌曲正确
+2026-06-23 20:37:50,051 INFO [utils.logUtils] [test_common.py (test_play_circle:247)] - 第1次校验列表循环下一曲正确
+2026-06-23 20:37:53,524 INFO [utils.logUtils] [test_common.py (test_play_circle:247)] - 第2次校验列表循环下一曲正确
+2026-06-23 20:37:56,947 INFO [utils.logUtils] [test_common.py (test_play_circle:247)] - 第3次校验列表循环下一曲正确

@@ -14,7 +14,7 @@ class QQmusicApp:
         try:
             self.app = Application(backend="uia").start(self.app_path)
             #测试代码
-            # self.app = Application(backend="uia").connect(process=4060)
+            #self.app = Application(backend="uia").connect(process=14396)
             #定位窗口
             self.win = self.app.window(title="QQMusic")
             self.win.wait("visible")
@@ -36,4 +36,4 @@ def QQMusic_app():
 
     yield QQmusic
 
-    QQmusic.close()
+    #QQmusic.close()
