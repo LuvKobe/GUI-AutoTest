@@ -7,6 +7,7 @@ from pywinauto import mouse
 from utils.logUtils import Logger
 from utils.yamlUtils import read_yaml
 
+@pytest.mark.order(4)
 class TestLike:
     '''
     测试我喜欢——文本
