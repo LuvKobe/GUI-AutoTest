@@ -7,6 +7,7 @@ from pywinauto import mouse
 from utils.logUtils import Logger
 from utils.yamlUtils import read_yaml
 
+@pytest.mark.order(3)
 class TestLocal:
     '''
     测试本地下载模块——文本
