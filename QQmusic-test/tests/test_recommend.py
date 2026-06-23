@@ -4,6 +4,7 @@ from pywinauto import mouse
 from utils.logUtils import Logger
 from utils.yamlUtils import read_yaml
 
+@pytest.mark.order(2)
 class TestRecommend:
     logger = Logger.getlog()
     '''
